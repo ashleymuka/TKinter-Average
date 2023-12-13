@@ -1,11 +1,5 @@
 '''
-Author: Ashley Muka
-Assignment Title: TKinter Averages
-Assignment Description:create a python program to help calculate
-the average of three test scores. Program should gave a GUI
-Due Date:11/10/2023
-Date Created:11/08/2023
-Date Last Modified:11/10/2023
+Description:Implement a GUI using Tkinter that calculates the average of three test scores
 
 '''
 
@@ -13,13 +7,11 @@ Date Last Modified:11/10/2023
 import tkinter as tk
 import tkinter.font as tkFont
 
-#process and output
 class TestScoreApp:
     def __init__ (self, root):
         self.root = root
         self.root.title("Test Average Calculator")
         self.create_widgets()
-
 
     def create_widgets(self):
         
@@ -43,7 +35,6 @@ class TestScoreApp:
 
         quit_button = tk.Button(self.root, text="Quit", command=self.root.destroy)
 
-
         score1_label.grid(row=0, column=0)
         self.score1_entry.grid(row=0, column=1)
         score2_label.grid(row=1, column=0)
@@ -56,7 +47,7 @@ class TestScoreApp:
 
 
     def calculate_average(self):
-#input        
+       
         score1 = float(self.score1_entry.get())
         score2 = float(self.score2_entry.get())
         score3 = float(self.score3_entry.get())
